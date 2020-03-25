@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>jQuery Calculator</title>
+  <meta charset="UTF-8">
+  <title>jQuery Calculator</title>
 
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <!-- Added a link to our external stylesheet-->
-    <link rel="stylesheet" href="style.css">
+  <!-- Added a link to our external stylesheet-->
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<!-- Jumbotron for Title -->
-<div class="jumbotron">
+  <!-- Jumbotron for Title -->
+  <div class="jumbotron">
     <h1 class="text-center">jQuery Calculator</h1>
     <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
-</div>
+  </div>
 
-<div class="container">
+  <div class="container">
 
     <div class="row">
 
@@ -31,7 +33,7 @@
         <div class="card">
           <h3 class="card-header">Calculator</h3>
 
-          <div class="card-body">
+          <div id="calculator" class="card-body">
             <button id="button-1" class="btn btn-primary number" value="1"><span>1</span></button>
             <button id="button-2" class="btn btn-primary number" value="2"><span>2</span></button>
             <button id="button-3" class="btn btn-primary number" value="3"><span>3</span></button>
@@ -73,16 +75,84 @@
     </div>
   </div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-$(document).ready(function() {
+    $(document).ready(function () {
 
-// Your code here...
+      // Target elements
+      var resultH1 = $("#result");
+      var firstNumberH1 = $("#first-number");
+      var operatorH1 = $("#operator");
+      var secondNumberH1 = $("#second-number");
+      var calculatorCard = $("#calculator");
+
+      // firstNumber, secondNumber, operator, result
+      var firstNumber = "";
+      var secondNumber = "";
+      var operator = "";
+      var result = 0;
+
+      init();
+
+      // Your code here...
+      function init() {
+        result = 0;
+        firstNumber = 0;
+        secondNumber = 0;
+        operator = "";
+        resultH1.text("0");
+        firstNumberH1.text("0");
+        secondNumberH1.text("0");
+        operatorH1.text("?")
+      }
+
+      // For the next 30 minutes, your goals should be to:
+      // Create click handlers for the relevant elements
+      // Begin creating sets of variables that you think you will need. As a few suggestions:
+      // firstNumber, secondNumber, operator, result
+      // Create code that captures the numbers from button clicks, and then displays them on the HTML.
+      // Create code that captures an operator click, then immediately tells your code to begin recording the second number. (Example: If a user clicks the "plus" button, you know they are done typing the first number).
+      // Create code that checks which operator the user has clicked, then saves this operator for later use in a conditional statement. (Example: If a user clicks the "plus" button, you know you will need to be adding two numbers. If a user clicks the "minus" button, you will need to be subtracting two numbers. Think: if-else statements!)
 
 
-});
+      // calculatorCard.on("click", function(e) {
+      //   element = e.target
+      //   if(element.matches("button")) {
+      //     console.log(element);
+      //   }
+      // })
 
-</script>
+      // Declare a variable for first num and 2nd num => currentNum = first;
+      // Declare first string variable 
+      // Declare second string variable
+      // Declare operator
+
+      // If currentNum = first;
+      // When a number button is clicked
+      // Store everything in a string variable until an operator is clicked
+
+      // When an operator is clicked
+      // Store operator clicked into global operator variable
+
+      // Change currentNum = second
+      // Turn the string variable into an integer
+
+      // If currentNum = second
+      // When number button is clicked
+      // Store everything in second string variable until = (equal) operator is clicked
+
+      // When equal operator is clicked
+      // Use switch cases to define the operator (minus => -)
+      // Use operation function to calculate result using the global variables (first num, second num, operator)
+      // Show result   
+
+      // When clear is clicked
+      // Set default values  
+
+    });
+
+  </script>
 
 </body>
+
 </html>
