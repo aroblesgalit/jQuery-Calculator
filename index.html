@@ -78,7 +78,16 @@
 $(document).ready(function() {
 
 // Your code here...
+var firstNumber = $("#first-number");
+var num;
 
+// check which number was clicked and output to screen
+$(".number").on("click", function(){
+  var btnClicked = $(this).val();
+  var currentNumber = firstNumber.text();
+  console.log(currentNumber);
+  firstNumber.text(currentNumber + btnClicked);
+})
 
 });
 
