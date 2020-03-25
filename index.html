@@ -101,9 +101,9 @@
         secondNumber = 0;
         operator = "";
         resultH1.text("0");
-        firstNumberH1.text("0");
-        secondNumberH1.text("0");
-        operatorH1.text("?")
+        firstNumberH1.text("");
+        secondNumberH1.text("");
+        operatorH1.text("")
       }
 
       // For the next 30 minutes, your goals should be to:
@@ -115,12 +115,22 @@
       // Create code that checks which operator the user has clicked, then saves this operator for later use in a conditional statement. (Example: If a user clicks the "plus" button, you know you will need to be adding two numbers. If a user clicks the "minus" button, you will need to be subtracting two numbers. Think: if-else statements!)
 
 
-      // calculatorCard.on("click", function(e) {
-      //   element = e.target
-      //   if(element.matches("button")) {
-      //     console.log(element);
-      //   }
-      // })
+
+      // Your code here...
+      var firstNumberH1 = $("#first-number");
+      
+
+      // check which number was clicked and output to screen
+      $(".number").on("click", function () {
+        var btnClicked = $(this).val();
+        var currentNumber = firstNumberH1.text();
+
+        firstNumberH1.text(currentNumber + btnClicked);
+
+        
+      })
+
+
 
       // Declare a variable for first num and 2nd num => currentNum = first;
       // Declare first string variable 
